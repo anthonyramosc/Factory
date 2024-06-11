@@ -1,0 +1,18 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Taste {
+  id              Int       @id @default(autoincrement())
+  taste           String    @unique
+  description     String?
+  price           Int
+  createdAt       DateTime  @default(now())
+  updateAt        DateTime  @updatedAt  
+}
