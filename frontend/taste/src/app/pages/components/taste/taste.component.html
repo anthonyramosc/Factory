@@ -1,0 +1,18 @@
+<table>
+    <thead>
+      <tr>
+        <th>taste</th>
+        <th>description</th>
+        <th>price</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *NgFor="let taste of data">
+        <td>{{ taste.taste }}</td>
+        <td>{{  taste.description }}</td>
+        <td>{{ taste.price }}</td>
+
+      </tr>
+    </tbody>
+  </table>
